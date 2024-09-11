@@ -1,31 +1,159 @@
 <!DOCTYPE html>
-<html lang="ru" data-validate="html">
-
+<html class="page" lang="ru" data-validate="html">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internship</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+    <link rel="preload" href="./fonts/Manrope-Light.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Manrope-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Manrope-Medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="sass/style.scss">
+    <title>Internship</title>
   </head>
-
   <body class="page-body">
-    <!-- пример использования спрайта -->
+    <main class="main__container">
+      <section class="hero" data-test="hero">
+        <h1 class="visually-hidden">Интернатура</h1>
+        <header class="hero__header header">
+          <div class="header__wrapper">
+            <svg class="header__logo logo" width="52" height="52">
+              <use href="/__spritemap#sprite-logo"></use>
+            </svg>
+            <div class="header-nav">
+              <button class="header-nav__toggle button-burger" type="button">меню</button>
+              <ul class="header-nav__list list">
+                <li class="header-nav__item">
+                  <a class="header-nav__link" href="#">О проекте</a>
+                </li>
+                <li class="header-nav__item header-nav__item--current">
+                  <a class="header-nav__link header-nav__link--current" href="#">Программы</a>
+                  <ul class="header-nav__sublist list">
+                    <li class="header-nav__subitem">
+                      <a class="header-nav__link header-nav__link--current" href="#">Стажировки</a>
+                    </li>
+                    <li class="header-nav__subitem">
+                      <a class="header-nav__link" href="#">Волонтёрство</a>
+                    </li>
+                    <li class="header-nav__subitem">
+                      <a class="header-nav__link" href="#">Учёба</a>
+                    </li>
+                    <li class="header-nav__subitem">
+                      <a class="header-nav__link" href="#">Религия</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="header-nav__item">
+                  <a class="header-nav__link" href="#">Как поехать</a>
+                </li>
+                <li class="header-nav__item">
+                  <a class="header-nav__link" href="#">Отзывы</a>
+                </li>
+                <li class="header-nav__item header-nav__item--open">
+                  <a class="header-nav__link" href="#">Новости</a>
+                  <ul class="header-nav__sublist list">
+                    <li class="header-nav__subitem">
+                      <a class="header-nav__link" href="#">Общее</a>
+                    </li>
+                    <li class="header-nav__subitem">
+                      <a class="header-nav__link" href="#">Волонтёрство</a>
+                    </li>
+                    <li class="header-nav__subitem">
+                      <a class="header-nav__link" href="#">Стажировки</a>
+                    </li>
+                    <li class="header-nav__subitem">
+                      <a class="header-nav__link" href="#">Карьера</a>
+                    </li>
+                    <li class="header-nav__subitem">
+                      <a class="header-nav__link" href="#">Путешествия</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="header-nav__item">
+                  <a class="header-nav__link" href="#">Контакты</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </header>
+        <div class="hero__slider">
+          <ul class="hero__list list">
+            <li class="hero__item">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/hero1-desktop.webp 1x, img/hero1-desktop@2x.webp 2x" width="1440" height="800">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/hero1-tablet.webp 1x, img/hero1-tablet@2x.webp 2x" width="768" height="1024">
+                <source type="image/webp" srcset="img/hero1-mobile.webp 1x, img/hero1-mobile@2x.webp 2x" width="320" height="568">
+                <source type="image/jpg" media="(min-width: 1440px)" srcset="img/hero1-desktop.jpg 1x, img/hero1-desktop@2x.jpg 2x" width="1440" height="800">
+                <source type="image/jpg" media="(min-width: 768px)" srcset="img/hero1-tablet.jpg 1x, img/hero1-tablet@2x.jpg 2x" width="768" height="1024">
+                <img class="hero__image" src="img/hero1-mobile.jpg" srcset="img/hero1-mobile@2x.jpg 2x" width="320" height="568" alt="Фото девушки в очках.">
+              </picture>
+              <div class="hero__content">
+                <h2 class="hero__title">Глобальный профессиональный опыт обучения за рубежом</h2>
+                <p>Погрузитесь в академическую программу, проходя практику в разных городах, ощущая настоящий студенческий стиль жизни!</p>
+                <a class="hero__link" href="#">Подробнее</a>
+              </div>
+            </li>
+            <li class="hero__item">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/hero2-desktop.webp 1x, img/hero2-desktop@2x.webp 2x" width="1440" height="800">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/hero2-tablet.webp 1x, img/hero2-tablet@2x.webp 2x" width="768" height="1024">
+                <source type="image/webp" srcset="img/hero2-mobile.webp 1x, img/hero2-mobile@2x.webp 2x" width="320" height="568">
+                <source type="image/jpg" media="(min-width: 1440px)" srcset="img/hero2-desktop.jpg 1x, img/hero2-desktop@2x.jpg 2x" width="1440" height="800">
+                <source type="image/jpg" media="(min-width: 768px)" srcset="img/hero2-tablet.jpg 1x, img/hero2-tablet@2x.jpg 2x" width="768" height="1024">
+                <img class="hero__image" src="img/hero2-mobile.jpg" srcset="img/hero2-mobile@2x.jpg 2x" width="320" height="568" alt="Фото группы людей.">
+              </picture>
+              <div class="hero__content">
+                <h2 class="hero__title">Волонтёрские программы – внесите свой вклад в общество</h2>
+                <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.</p>
+                <a class="hero__link" href="#">Подробнее</a>
+              </div>
+            </li>
+            <li class="hero__item">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/hero3-desktop.webp 1x, img/hero3-desktop@2x.webp 2x" width="1440" height="800">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/hero3-tablet.webp 1x, img/hero3-tablet@2x.webp 2x" width="768" height="1024">
+                <source type="image/webp" srcset="img/hero3-mobile.webp 1x, img/hero3-mobile@2x.webp 2x" width="320" height="568">
+                <source type="image/jpg" media="(min-width: 1440px)" srcset="img/hero3-desktop.jpg 1x, img/hero3-desktop@2x.jpg 2x" width="1440" height="800">
+                <source type="image/jpg" media="(min-width: 768px)" srcset="img/hero3-tablet.jpg 1x, img/hero3-tablet@2x.jpg 2x" width="768" height="1024">
+                <img class="hero__image" src="img/hero3-mobile.jpg" srcset="img/hero3-mobile@2x.jpg" width="320" height="568" alt="Фото трёх человек в офисе за столом.">
+              </picture>
+              <div class="hero__content">
+                <h2 class="hero__title">Программы стажировок в крупнейших компаниях мира</h2>
+                <p>Получите незаменимый опыт работы в ведущих  мировых компаниях и государственных организациях.</p>
+                <a class="hero__link" href="#">Подробнее</a>
+              </div>
+            </li>
+          </ul>
+          <div class="hero__pagination">
+            <button class="hero__pagination-button" type="button">
+              <span class="visually-hidden">1 слайд</span>
+            </button>
+            <button class="hero__pagination-button" type="button">
+              <span class="visually-hidden">2 слайд</span>
+            </button>
+            <button class="hero__pagination-button" type="button">
+              <span class="visually-hidden">3 слайд</span>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section data-test="about">about</section>
+      <section data-test="programs">programs</section>
+      <section data-test="grant">grant</section>
+      <section data-test="news">news</section>
+      <section data-test="FAQ">FAQ</section>
+      <section data-test="reviews">reviews</h>
+      <section data-test="contacts">contacts</section>
+      <section data-test="form">form</m>
+    </main>
+    <footer data-test="footer">footer</footer>
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
+
+<!-- пример использования спрайта
     <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
     <svg>
       <use href="/__spritemap#sprite-user"></use>
     </svg>
-    <!-- примеры требуемых атрибутов data-test="*" -->
-    <div data-test="hero">hero</div>
-    <div data-test="about">about</div>
-    <div data-test="programs">programs</div>
-    <div data-test="grant">grant</div>
-    <div data-test="news">news</div>
-    <div data-test="FAQ">FAQ</div>
-    <div data-test="reviews">reviews</div>
-    <div data-test="contacts">contacts</div>
-    <div data-test="form">form</div>
-    <div data-test="footer">footer</div>
-    <script type="module" src="js/main.js"></script>
-  </body>
-
-</html>
+     примеры требуемых атрибутов data-test="*" -->
