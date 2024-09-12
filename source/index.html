@@ -20,60 +20,60 @@
             <svg class="header__logo logo" width="52" height="52">
               <use href="/__spritemap#sprite-logo"></use>
             </svg>
-            <div class="header-nav">
+            <nav class="header-nav header-nav--closed" aria-label="Основная навигация">
               <button class="header-nav__toggle button-burger" type="button">меню</button>
               <ul class="header-nav__list list">
                 <li class="header-nav__item">
-                  <a class="header-nav__link" href="#">О проекте</a>
+                  <a class="header-nav__link" href="#about">О проекте</a>
                 </li>
-                <li class="header-nav__item header-nav__item--current">
-                  <a class="header-nav__link header-nav__link--current" href="#">Программы</a>
+                <li class="header-nav__item header-nav__item--opened">
+                  <a class="header-nav__link" href="#">Программы</a>
                   <ul class="header-nav__sublist list">
                     <li class="header-nav__subitem">
-                      <a class="header-nav__link header-nav__link--current" href="#">Стажировки</a>
+                      <a class="header-nav__sublink" href="#programs">Стажировки</a>
                     </li>
                     <li class="header-nav__subitem">
-                      <a class="header-nav__link" href="#">Волонтёрство</a>
+                      <a class="header-nav__sublink" href="#programs">Волонтёрство</a>
                     </li>
                     <li class="header-nav__subitem">
-                      <a class="header-nav__link" href="#">Учёба</a>
+                      <a class="header-nav__sublink" href="#programs">Учёба</a>
                     </li>
                     <li class="header-nav__subitem">
-                      <a class="header-nav__link" href="#">Религия</a>
+                      <a class="header-nav__sublink" href="#programs">Религия</a>
                     </li>
                   </ul>
                 </li>
                 <li class="header-nav__item">
-                  <a class="header-nav__link" href="#">Как поехать</a>
+                  <a class="header-nav__link" href="#grant">Как поехать</a>
                 </li>
                 <li class="header-nav__item">
-                  <a class="header-nav__link" href="#">Отзывы</a>
+                  <a class="header-nav__link" href="#reviews">Отзывы</a>
                 </li>
-                <li class="header-nav__item header-nav__item--open">
+                <li class="header-nav__item header-nav__item--opened">
                   <a class="header-nav__link" href="#">Новости</a>
                   <ul class="header-nav__sublist list">
                     <li class="header-nav__subitem">
-                      <a class="header-nav__link" href="#">Общее</a>
+                      <a class="header-nav__sublink" href="#news">Общее</a>
                     </li>
                     <li class="header-nav__subitem">
-                      <a class="header-nav__link" href="#">Волонтёрство</a>
+                      <a class="header-nav__sublink" href="#news">Волонтёрство</a>
                     </li>
                     <li class="header-nav__subitem">
-                      <a class="header-nav__link" href="#">Стажировки</a>
+                      <a class="header-nav__sublink" href="#news">Стажировки</a>
                     </li>
                     <li class="header-nav__subitem">
-                      <a class="header-nav__link" href="#">Карьера</a>
+                      <a class="header-nav__sublink" href="#news">Карьера</a>
                     </li>
                     <li class="header-nav__subitem">
-                      <a class="header-nav__link" href="#">Путешествия</a>
+                      <a class="header-nav__sublink" href="#news">Путешествия</a>
                     </li>
                   </ul>
                 </li>
                 <li class="header-nav__item">
-                  <a class="header-nav__link" href="#">Контакты</a>
+                  <a class="header-nav__link" href="#contacts">Контакты</a>
                 </li>
               </ul>
-            </div>
+            </nav>
           </div>
         </header>
         <div class="hero__slider">
@@ -137,13 +137,13 @@
           </div>
         </div>
       </section>
-      <section data-test="about">about</section>
-      <section data-test="programs">programs</section>
-      <section data-test="grant">grant</section>
-      <section data-test="news">news</section>
+      <section id="about" data-test="about">about</section>
+      <section id="programs" data-test="programs">programs</section>
+      <section id="grant" data-test="grant">grant</section>
+      <section id="news" data-test="news">news</section>
       <section data-test="FAQ">FAQ</section>
-      <section data-test="reviews">reviews</h>
-      <section data-test="contacts">contacts</section>
+      <section id="reviews" data-test="reviews">reviews</h>
+      <section id="contacts" data-test="contacts">contacts</section>
       <section data-test="form">form</m>
     </main>
     <footer data-test="footer">footer</footer>
