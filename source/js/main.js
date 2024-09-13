@@ -4,5 +4,7 @@
 // import 'swiper/css';
 
 import { clickMenu } from './burger-menu';
+import { flippingThroughTheSliderHero } from './hero-swiper';
 
 clickMenu();
+flippingThroughTheSliderHero();

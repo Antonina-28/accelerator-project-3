@@ -76,9 +76,9 @@
             </nav>
           </div>
         </header>
-        <div class="hero__slider">
-          <ul class="hero__list list">
-            <li class="hero__item">
+        <div class="hero__slider swiper" id="swiper-hero">
+          <ul class="hero__list list swiper-wrapper">
+            <li class="hero__item swiper-slide">
               <picture>
                 <source type="image/webp" media="(min-width: 1440px)" srcset="img/hero1-desktop.webp 1x, img/hero1-desktop@2x.webp 2x" width="1440" height="800">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/hero1-tablet.webp 1x, img/hero1-tablet@2x.webp 2x" width="768" height="1024">
@@ -90,10 +90,12 @@
               <div class="hero__content">
                 <h2 class="hero__title">Глобальный профессиональный опыт обучения за рубежом</h2>
                 <p>Погрузитесь в академическую программу, проходя практику в разных городах, ощущая настоящий студенческий стиль жизни!</p>
-                <a class="hero__link" href="#">Подробнее</a>
+                <div class="hero__wrapper">
+                  <a class="hero__link" href="#">Подробнее</a>
+                </div>
               </div>
             </li>
-            <li class="hero__item">
+            <li class="hero__item swiper-slide">
               <picture>
                 <source type="image/webp" media="(min-width: 1440px)" srcset="img/hero2-desktop.webp 1x, img/hero2-desktop@2x.webp 2x" width="1440" height="800">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/hero2-tablet.webp 1x, img/hero2-tablet@2x.webp 2x" width="768" height="1024">
@@ -105,10 +107,12 @@
               <div class="hero__content">
                 <h2 class="hero__title">Волонтёрские программы – внесите свой вклад в общество</h2>
                 <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.</p>
-                <a class="hero__link" href="#">Подробнее</a>
+                <div class="hero__wrapper">
+                  <a class="hero__link" href="#">Подробнее</a>
+                </div>
               </div>
             </li>
-            <li class="hero__item">
+            <li class="hero__item swiper-slide">
               <picture>
                 <source type="image/webp" media="(min-width: 1440px)" srcset="img/hero3-desktop.webp 1x, img/hero3-desktop@2x.webp 2x" width="1440" height="800">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/hero3-tablet.webp 1x, img/hero3-tablet@2x.webp 2x" width="768" height="1024">
@@ -120,11 +124,13 @@
               <div class="hero__content">
                 <h2 class="hero__title">Программы стажировок в крупнейших компаниях мира</h2>
                 <p>Получите незаменимый опыт работы в ведущих  мировых компаниях и государственных организациях.</p>
-                <a class="hero__link" href="#">Подробнее</a>
+                <div class="hero__wrapper">
+                  <a class="hero__link" href="#">Подробнее</a>
+                </div>
               </div>
             </li>
           </ul>
-          <div class="hero__pagination">
+          <div class="hero__pagination swiper-pagination">
             <button class="hero__pagination-button" type="button">
               <span class="visually-hidden">1 слайд</span>
             </button>
