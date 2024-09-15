@@ -1,0 +1,88 @@
+.advantages {
+  width: 290px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  background-color: $primary-blue;
+  color: $secondary-color;
+  border-radius: 20px;
+  padding: 42px 20px 40px;
+
+  @media (min-width: $tablet-width) {
+    width: 678px;
+    padding: 72px 50px 50px 70px;
+    display: grid;
+    grid-template-columns: 253px 253px;
+    grid-template-rows: min-content min-content;
+    column-gap: 52px;
+    row-gap: 54px;
+    align-items: stretch;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1240px;
+    padding-right: 100px;
+    padding-left: 120px;
+    grid-template-columns: 484px 484px;
+  }
+}
+
+.advantages__item {
+  position: relative;
+  padding: 16px 21px 14px;
+  border: 1px solid $secondary-color;
+  border-radius: 16px;
+  letter-spacing: -0.5px;
+
+  @media (min-width: $desktop-width) {
+    padding: 31px 41px 29px;
+    display: grid;
+    grid-template-columns: 201px 201px;
+    align-items: center;
+  }
+}
+
+.advantages__item::before {
+  position: absolute;
+  content: "";
+  width: 42px;
+  height: 42px;
+  background-color: $primary-blue;
+  top: -23px;
+  left: -21px;
+  background-image: url("../__spritemap#sprite-star-view");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 18px 22px;
+}
+
+.advantages__item h5 {
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $base-white;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 26px;
+    line-height: 30px;
+    margin-bottom: 0;
+  }
+}
+
+.advantages__item p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 300;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+  }
+}

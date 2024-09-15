@@ -62,6 +62,19 @@
   position: absolute;
   bottom: 20px;
   left: 15px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 325px 268px;
+    grid-template-rows: min-content min-content;
+    bottom: 58px;
+    left: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 496px 279px;
+    left: 100px;
+  }
 }
 
 .hero__title {
@@ -70,66 +83,125 @@
   font-size: 22px;
   line-height: 26px;
   font-weight: 400;
+  letter-spacing: -0.68px;
   color: $primary-blue;
   background-color: $base-white;
   padding: 20px 15px 16px 14px;
   border-radius: 0 16px 16px 0;
+
+  @media (min-width: $tablet-width) {
+    width: 659px;
+    font-size: 36px;
+    line-height: 44px;
+    padding: 30px 69px 24px 40px;
+    letter-spacing: -1px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    border-radius: 0 30px 30px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 968px;
+    font-size: 54px;
+    line-height: 62px;
+    padding: 40px 50px 30px;
+    letter-spacing: -1.45px;
+  }
 }
 
 .hero__content p {
+  position: relative;
   margin: 0;
   max-width: 267px;
   background-color: $base-white;
   padding: 0 14px 15px;
   border-radius: 0 0 14px;
+  letter-spacing: -0.53px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 355px;
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    padding: 0 30px 35px 40px;
+    border-radius: 0 0 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 496px;
+    line-height: 26px;
+    padding-left: 50px;
+  }
 }
 
 .hero__wrapper {
+  position: relative;
   width: 184px;
   min-height: 64px;
   display: flex;
   padding: 10px 15px;
   border-radius: 0 0 14px 14px;
   background-color: $base-white;
+
+  @media (min-width: $tablet-width) {
+    width: 268px;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    padding: 0 40px 79px 0;
+    border-radius: 0 0 30px;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 279px;
+    padding: 10px 50px 45px 30px;
+  }
 }
 
-.hero__link {
-  position: relative;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 12px;
-  line-height: 12px;
-  font-weight: 500;
-  color: $primary-blue;
-  background-color: $base-white;
-  padding: 15px 58px 15px 20px;
-  border: 1px solid $primary-blue;
-  border-radius: 30px;
-}
-
-.hero__link::after {
-  position: absolute;
-  content: "";
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background-color: $primary-blue;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 5px;
-}
-
-.hero__link::before {
+.hero__wrapper::after,
+.hero__content p::after,
+.hero__pagination::after {
   position: absolute;
   content: "";
   width: 10px;
   height: 10px;
+  background-image: url("../__spritemap#sprite-mask-hero-view");
+  background-repeat: no-repeat;
+  background-size: 10px 10px;
+  top: 0;
+  right: -10px;
+
+  @media (min-width: $tablet-width) {
+    width: 26px;
+    height: 26px;
+    background-size: 26px 26px;
+    right: -26px;
+  }
+}
+
+.hero__link {
+  text-decoration: none;
   background-color: $base-white;
-  mask-image: url("../__spritemap#sprite-arrow-view");
-  mask-repeat: no-repeat;
-  mask-size: 10px 10px;
-  right: 17px;
-  z-index: 1;
+  padding: 15px 58px 15px 20px;
+  letter-spacing: -0.3px;
+
+  @media (min-width: $tablet-width) {
+    padding: 20px 81px 22px 29px;
+  }
+}
+
+.hero__link--disabled {
+  border: 1px solid $condition-disabled;
+  color: $condition-disabled;
+  pointer-events: none;
+
+  &::after {
+    background-color: $condition-disabled;
+  }
+
+  &::before {
+    opacity: 0.6;
+  }
 }
 
 .hero__pagination {
@@ -140,9 +212,30 @@
   background-color: $base-white;
   border-radius: 12px 12px 0 0;
   position: absolute;
-  top: 201px;
+  top: auto;
+  bottom: 339px;
   left: 15px;
   z-index: 2;
+
+  @media (min-width: $tablet-width) {
+    width: 100px;
+    padding: 14px 20px;
+    border-radius: 20px 20px 0 0;
+    left: 45px;
+    top: auto;
+    bottom: 337px;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: 100px;
+    bottom: 367px;
+  }
+}
+
+.hero__pagination::after {
+  top: auto;
+  bottom: 0;
+  transform: rotate(270deg);
 }
 
 .hero__pagination-button {
@@ -152,6 +245,11 @@
   border-radius: 50%;
   border: 2px solid $primary-blue;
   background-color: $base-white;
+
+  @media (min-width: $tablet-width) {
+    width: 12px;
+    height: 12px;
+  }
 
   &:hover {
     border: 2px solid $base-white;
@@ -172,3 +270,17 @@
 .hero__pagination-button--active {
   background-color: $secondary-blue;
 }
+
+// .hero__content .hero__pagination {
+//   top: -28px;
+//   left: 0;
+
+//   @media (min-width: $tablet-width) {
+//     width: 100px;
+//     padding: 14px 20px;
+//     border-radius: 20px 20px 0 0;
+//     left: 45px;
+//     top: auto;
+//     bottom: 337px;
+//   }
+// }

@@ -1,0 +1,106 @@
+.button {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 500;
+  color: $primary-blue;
+  border: 1px solid $primary-blue;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+.button::after {
+  position: absolute;
+  content: "";
+  width: 34px;
+  height: 34px;
+  right: 4px;
+  border-radius: 50%;
+  background-color: $primary-blue;
+
+  @media (min-width: $tablet-width) {
+    width: 46px;
+    height: 46px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 5px;
+  }
+}
+
+.button::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: $base-white;
+  mask-image: url("../__spritemap#sprite-arrow-view");
+  mask-repeat: no-repeat;
+  mask-size: 10px 10px;
+  right: 16px;
+  z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    right: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 23px;
+  }
+}
+
+.button:hover {
+  background-color: $primary-blue;
+  color: $base-white;
+
+  &::after {
+    background-color: $base-white;
+  }
+
+  &::before {
+    background-color: $primary-blue;
+    transform: rotate(45deg);
+  }
+}
+
+.button:focus {
+  &::before {
+    transform: rotate(45deg);
+  }
+}
+
+.button:active {
+  background-color: $primary-blue;
+  color: rgba(255, 255, 255, 0.7);
+
+  &::after {
+    background-color: $base-white;
+  }
+
+  &::before {
+    background-color: $primary-blue;
+    opacity: 0.7;
+  }
+}
+
+.button:disabled {
+  border: 1px solid $condition-disabled;
+  color: $condition-disabled;
+  pointer-events: none;
+
+  &::after {
+    background-color: $condition-disabled;
+  }
+
+  &::before {
+    opacity: 0.6;
+  }
+}
