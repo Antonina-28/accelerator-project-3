@@ -74,6 +74,7 @@
   @media (min-width: $desktop-width) {
     grid-template-columns: 496px 279px;
     left: 100px;
+    bottom: 61px;
   }
 }
 
@@ -104,7 +105,7 @@
     width: 968px;
     font-size: 54px;
     line-height: 62px;
-    padding: 40px 50px 30px;
+    padding: 43px 50px 27px;
     letter-spacing: -1.45px;
   }
 }
@@ -236,6 +237,10 @@
   top: auto;
   bottom: 0;
   transform: rotate(270deg);
+
+  @media (min-width: $desktop-width) {
+    right: -25px;
+  }
 }
 
 .hero__pagination-button {
@@ -245,6 +250,7 @@
   border-radius: 50%;
   border: 2px solid $primary-blue;
   background-color: $base-white;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     width: 12px;

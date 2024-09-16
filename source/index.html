@@ -210,7 +210,7 @@
             </li>
           </ul>
         </div>
-        <div class="about__modal modal">
+        <div class="about__modal modal modal--close">
           <div class="modal__wrapper">
             <button class="modal__button modal__button--close" type="button">
               <span class="visually-hidden">Закрыть</span>
@@ -236,11 +236,10 @@
                     <option value="moscow">Москва</option>
                     <option value="novosibirsk">Новосибирск</option>
                   </select>
-                  <span class="select__arrow"></span>
                 </li>
                 <li class="form__item form__item--checkbox">
                   <label class="form__label form__label--checkbox" for="personal-data">Я согласен на обработку моих персональных данных</label>
-                  <input class="form__input form__input--checkbox" type="checkbox" id="personal-data" name="personal-data">
+                  <input class="form__input form__input--checkbox" type="checkbox" id="personal-data" name="personal-data" required>
                 </li>
               </ul>
               <button class="modal__button modal__button--submit button" type="submit">Отправить</button>

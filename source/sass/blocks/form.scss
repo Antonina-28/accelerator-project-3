@@ -4,23 +4,49 @@
 }
 
 .form__list {
-  width: 260px;
   display: flex;
   flex-direction: column;
   gap: 15px;
   margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    gap: 20px;
+    margin-bottom: 30px;
+  }
 }
 
 .form__item {
   display: flex;
   flex-direction: column;
   gap: 8px;
+
+  @media (min-width: $tablet-width) {
+    gap: 12px;
+  }
 }
 
 .form__label {
   font-size: 14px;
   line-height: 14px;
   opacity: 0.8;
+  letter-spacing: -0.4px;
+
+  @media (min-width: $tablet-width) {
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    line-height: 18px;
+  }
+}
+
+.form__label--checkbox {
+  font-size: 12px;
+  opacity: 1;
+
+  @media (min-width: $tablet-width) {
+    line-height: 12px;
+  }
 }
 
 .form__input,
@@ -30,9 +56,90 @@
   padding: 9px 8px 10px;
   font-size: 14px;
   line-height: 14px;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    line-height: 20px;
+
+    &:not(.form__input--checkbox) {
+      min-height: 50px;
+    }
+  }
+}
+
+.form__select {
+  position: relative;
+  appearance: none;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  display: inline-block;
+}
+
+.form__select::after {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  top: 50%;
+  right: 20px;
+  background-color: $base-primary;
+  background-image: url("../__spritemap#sprite-arrowhead-view");
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  background-position: center;
+  cursor: pointer;
+}
+
+.form__input--checkbox {
+  appearance: none;
+  width: 21px;
+  height: 20px;
+  border: 1px solid $primary-blue;
+  border-radius: 2px;
+  background-color: $primary-blue;
+
+  @media (min-width: $tablet-width) {
+    width: 20px;
+  }
 }
 
 .form__item--checkbox {
   flex-direction: row-reverse;
   gap: 10px;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+  }
+}
+
+.form__item--checkbox .form__input--checkbox:checked {
+  background-image: url("../__spritemap#sprite-check-view");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px 10px;
+  color: $base-white;
+}
+
+.form__item:hover,
+.form__item:focus,
+.form__item:active {
+  .form__label {
+    opacity: 1;
+  }
+
+  .form__input:not(.form__input--checkbox),
+  .form__select {
+    border: 1px solid $base-primary;
+  }
+}
+
+.form__input:disabled {
+  background-color: rgba(169, 175, 183, 0.2);
+  border: 1px solid rgba(169, 175, 183, 0.5);
+}
+
+.form__input.error {
+  background-color: rgba(255, 94, 102, 0.2);
+  border: 1px solid $condition-error;
 }

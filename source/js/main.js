@@ -5,6 +5,7 @@
 
 import { clickMenu } from './burger-menu';
 import { flippingThroughTheSliderHero } from './hero-swiper';
+import './modal-open';
 
 clickMenu();
 flippingThroughTheSliderHero();
