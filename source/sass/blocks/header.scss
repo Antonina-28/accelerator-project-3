@@ -114,7 +114,7 @@
 }
 
 .header-nav__toggle:hover,
-.header-nav__toggle:focus {
+.header-nav__toggle:focus-visible {
   background-color: $primary-blue;
   color: $base-white;
 

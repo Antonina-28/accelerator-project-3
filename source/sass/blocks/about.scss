@@ -1,17 +1,3 @@
-.about {
-  display: grid;
-  grid-template-columns: 320px;
-  justify-content: center;
-
-  @media (min-width: $tablet-width) {
-    grid-template-columns: 768px;
-  }
-
-  @media (min-width: $desktop-width) {
-    grid-template-columns: 1440px;
-  }
-}
-
 .about__wrapper {
   padding: 51px 15px 50px;
 
@@ -43,23 +29,10 @@
 }
 
 .about__title {
-  margin: 0;
   margin-bottom: 14px;
-  font-size: 20px;
-  font-weight: 400;
-  color: $primary-blue;
-  letter-spacing: -0.65px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 30px;
-    font-size: 34px;
-    line-height: 50px;
-    letter-spacing: -1.2px;
-  }
-
-  @media (min-width: $desktop-width) {
-    font-size: 50px;
-    letter-spacing: -1.78px;
   }
 }
 

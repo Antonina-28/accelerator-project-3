@@ -1,0 +1,13 @@
+.container {
+  display: grid;
+  grid-template-columns: 320px;
+  justify-content: center;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 768px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1440px;
+  }
+}

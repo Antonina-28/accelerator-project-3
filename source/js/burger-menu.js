@@ -1,10 +1,9 @@
+import { overlay } from './functions/overlay';
+
 const headerNav = document.querySelector('.header-nav');
 const navToggle = document.querySelector('.header-nav__toggle');
 const headerNavItems = document.querySelectorAll('.header-nav__item');
 const body = document.body;
-const overlay = document.createElement('div');
-
-overlay.classList.add('overlay');
 
 export function clickMenu() {
   navToggle.addEventListener('click', () => {
@@ -36,27 +35,14 @@ function openMenu() {
   headerNav.classList.remove('header-nav--closed');
   headerNav.classList.add('header-nav--opened');
   navToggle.classList.add('active');
-  body.style.overflow = 'hidden';
-//   overlay.style.cssText = `
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   background-color: rgba(0, 0, 0, 0.5);
-//   z-index: 1;
-//   pointer-events: none;
-// `;
-//   body.appendChild(overlay);
-//   headerNav.style.zIndex = '10';
+  overlay(true);
 }
 
 function closeMenu() {
   headerNav.classList.add('header-nav--closed');
   headerNav.classList.remove('header-nav--opened');
   navToggle.classList.remove('active');
-  body.style.overflow = 'auto';
-  // body.removeChild(overlay);
+  overlay(false);
 }
 
 function toggleSubmenu(item) {

@@ -1,0 +1,85 @@
+.grant {
+  background-color: $primary-blue;
+  color: $base-white;
+}
+
+.grant__wrapper {
+  padding: 70px 15px;
+  display: grid;
+  grid-template-columns: 290px;
+  justify-content: center;
+}
+
+.grant__title {
+  color: $base-white;
+  margin-bottom: 15px;
+}
+
+.grant__text {
+  margin-bottom: 30px;
+}
+
+.grant__text p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.grant__image {
+  border-radius: 19px;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.grant__subtitle {
+  margin: 0;
+  margin-bottom: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+.grant__list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  counter-reset: num;
+}
+
+.grant__item {
+  position: relative;
+  padding-top: 5px;
+  padding-left: 15px;
+}
+
+.grant__item::before {
+  position: absolute;
+  content: counter(num);
+  counter-increment: num;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 32px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 500;
+  color: $base-white;
+  top: 0;
+  left: 0;
+  background-color: $primary-blue;
+}
+
+.grant__item-text {
+  margin: 0;
+  max-width: 275px;
+  padding: 25px 26px;
+  border-radius: 16px;
+  border: 1px solid $secondary-color;
+  font-size: 14px;
+  color: $secondary-color;
+}

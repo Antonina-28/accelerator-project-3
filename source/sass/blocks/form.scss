@@ -68,26 +68,18 @@
 }
 
 .form__select {
-  position: relative;
   appearance: none;
   padding-top: 14px;
   padding-bottom: 14px;
   display: inline-block;
-}
-
-.form__select::after {
-  position: absolute;
-  content: "";
-  width: 16px;
-  height: 16px;
-  top: 50%;
-  right: 20px;
   background-color: $base-primary;
-  background-image: url("../__spritemap#sprite-arrowhead-view");
-  background-repeat: no-repeat;
-  background-size: 16px 16px;
-  background-position: center;
+  mask-image: url("../__spritemap#sprite-arrowhead-view");
+  mask-repeat: no-repeat;
+  mask-size: 16px 16px;
+  mask-position: right;
   cursor: pointer;
+  border: 1px solid rgba(72, 72, 72, 0.3);
+  border-radius: 8px;
 }
 
 .form__input--checkbox {
