@@ -67,19 +67,35 @@
   }
 }
 
+.form__item--select {
+  position: relative;
+}
+
 .form__select {
   appearance: none;
   padding-top: 14px;
   padding-bottom: 14px;
   display: inline-block;
+}
+
+.form__icon {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
   background-color: $base-primary;
   mask-image: url("../__spritemap#sprite-arrowhead-view");
   mask-repeat: no-repeat;
   mask-size: 16px 16px;
   mask-position: right;
-  cursor: pointer;
-  border: 1px solid rgba(72, 72, 72, 0.3);
+  right: 20px;
+  top: 47px;
+}
+
+.form__select option {
+  margin-top: 4px;
   border-radius: 8px;
+  border: 1px solid $base-primary;
 }
 
 .form__input--checkbox {
