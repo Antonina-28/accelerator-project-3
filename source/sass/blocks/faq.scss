@@ -1,0 +1,155 @@
+.faq__wrapper {
+  padding: 50px 15px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 60px 206px;
+  }
+}
+
+.faq__title {
+  text-align: center;
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 11px 9px;
+    margin-bottom: 60px;
+  }
+}
+
+.faq__accordions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.faq__accordion {
+  border-radius: 14px;
+  border: 2px solid $primary-blue;
+  padding: 22px 17px;
+
+  @media (min-width: $tablet-width) {
+    padding: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 42px;
+  }
+}
+
+.faq__accordion--active {
+  background-color: $primary-blue;
+  color: $secondary-color;
+}
+
+.faq__button {
+  position: relative;
+  padding: 0;
+  padding-right: 56px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: $primary-blue;
+  background-color: transparent;
+  border: none;
+  border-radius: 14px;
+  text-align: left;
+  transition: 0.4s;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    font-size: 22px;
+    line-height: 26px;
+    width: 610px;
+    padding: 7px 50px 7px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 28px;
+    line-height: 34px;
+    width: 940px;
+  }
+}
+
+.faq__button::after {
+  position: absolute;
+  content: "";
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid $primary-blue;
+  background-color: $primary-blue;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+
+  @media (min-width: $tablet-width) {
+    transform: none;
+    top: 0;
+  }
+}
+
+.faq__button::before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: $base-white;
+  mask-image: url("../__spritemap#sprite-plus-view");
+  mask-size: 18px 18px;
+  mask-repeat: no-repeat;
+  top: 50%;
+  transform: translateY(-46%);
+  right: 9px;
+  z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    transform: none;
+    top: 11px;
+  }
+}
+
+.faq__button--active {
+  color: $base-white;
+
+  &::after {
+    background-color: $base-white;
+    border: 1px solid $base-white;
+  }
+
+  &::before {
+    right: 11px;
+    mask-image: none;
+    width: 18px;
+    height: 1px;
+    background-color: $primary-blue;
+    z-index: 1;
+
+    @media (min-width: $tablet-width) {
+      top: 20px;
+    }
+  }
+}
+
+.faq__panel {
+  display: none;
+  overflow: hidden;
+}
+
+.faq__panel p {
+  margin: 0;
+  margin-top: 20px;
+  font-size: 14px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+  }
+}

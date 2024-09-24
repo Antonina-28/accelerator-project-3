@@ -253,10 +253,10 @@
           <div class="programs__slider swiper" id="swiper-programs">
             <h3 class="programs__title title">Программы</h3>
             <div class="programs__navigation button-wrapper">
-              <button class="programs__button programs__button--prev">
+              <button class="programs__button programs__button--prev button-arrow button-arrow--prev">
                 <span class="visually-hidden">Предыдущий слайд</span>
               </button>
-              <button class="programs__button programs__button--next">
+              <button class="programs__button programs__button--next button-arrow">
                 <span class="visually-hidden">Следующий слайд</span>
               </button>
             </div>
@@ -415,12 +415,12 @@
           </div>
         </div>
       </section>
-      <section class="news" id="news" data-test="news">
-        <div class="news__wrapper container">
+      <section class="news container" id="news" data-test="news">
+        <div class="news__wrapper">
           <h3 class="news__title title">Новости и материалы</h3>
           <ul class="news__tabs list">
             <li class="news__tab">
-              <a class="news__tab-link" href="#">Общее</a>
+              <a class="news__tab-link news__tab-link--active" href="#">Общее</a>
             </li>
             <li class="news__tab">
               <a class="news__tab-link" href="#">Волонтёрство</a>
@@ -435,9 +435,9 @@
               <a class="news__tab-link" href="#">Путешествия</a>
             </li>
           </ul>
-          <div class="news__slider">
-            <ul class="news__list list">
-              <li class="news__item">
+          <div class="news__slider swiper" id="swiper-news">
+            <ul class="news__list list swiper-wrapper">
+              <li class="news__item swiper-slide">
                 <picture>
                   <source type="image/webp" media="(min-width: 1440px)" srcset="img/news1-desktop.webp 1x, img/news1-desktop@2x.webp 2x" width="604" height="400">
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/news1-tablet.webp 1x, img/news1-tablet@2x.webp 2x" width="324" height="350">
@@ -446,16 +446,18 @@
                   <source type="image/jpg" media="(min-width: 768px)" srcset="img/news1-tablet.jpg 1x, img/news1-tablet@2x.jpg 2x" width="324" height="350">
                   <img class="news__image" src="img/news1-mobile.jpg" srcset="img/news1-mobile@2x.jpg" width="290" height="330" alt="Парень берёт интервью у девушки в библиотеке.">
                 </picture>
-                <span class="news__date">23/03/2023</span>
-                <h4 class="news__subtitle">Интервью с участницей программы стажировки</h4>
-                <div class="news__text">
-                  <p>Саша рассказывает, как попала в программу и как прошла 6- месячная стажировка в ISOFound</p>
+                <div class="news__content">
+                  <span class="news__date">23/03/2023</span>
+                  <h4 class="news__subtitle">Интервью с участницей программы стажировки</h4>
+                  <div class="news__text">
+                    <p>Саша рассказывает, как попала в программу и как прошла 6- месячная стажировка в ISOFound</p>
+                  </div>
+                  <a class="news__link button" href="#">
+                    <span class="visually-hidden">Перейти по ссылке</span>
+                  </a>
                 </div>
-                <a class="news__link" href="#">
-                  <span class="visually-hidden">Перейти по ссылке</span>
-                </a>
               </li>
-              <li class="news__item">
+              <li class="news__item swiper-slide">
                 <picture>
                   <source type="image/webp" media="(min-width: 1440px)" srcset="img/news2-desktop.webp 1x, img/news2-desktop@2x.webp 2x" width="286" height="400">
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/news2-tablet.webp 1x, img/news2-tablet@2x.webp 2x" width="324" height="350">
@@ -464,16 +466,18 @@
                   <source type="image/jpg" media="(min-width: 768px)" srcset="img/news2-tablet.jpg 1x, img/news2-tablet@2x.jpg 2x" width="324" height="350">
                   <img class="news__image" src="img/news2-mobile.jpg" srcset="img/news2-mobile@2x.jpg" width="290" height="240" alt="Многоэтажные здания на берегу океана.">
                 </picture>
-                <span class="news__date">20/03/2023</span>
-                <h4 class="news__subtitle">Путешествуем по миру</h4>
-                <div class="news__text">
-                  <p>Какие места посещают наши студенты весной</p>
+                <div class="news__content">
+                  <span class="news__date">20/03/2023</span>
+                  <h4 class="news__subtitle">Путешествуем по миру</h4>
+                  <div class="news__text">
+                    <p>Какие места посещают наши студенты весной</p>
+                  </div>
+                  <a class="news__link button" href="#">
+                    <span class="visually-hidden">Перейти по ссылке</span>
+                  </a>
                 </div>
-                <a class="news__link" href="#">
-                  <span class="visually-hidden">Перейти по ссылке</span>
-                </a>
               </li>
-              <li class="news__item">
+              <li class="news__item swiper-slide">
                 <picture>
                   <source type="image/webp" media="(min-width: 1440px)" srcset="img/new3-desktop.webp 1x, img/new3-desktop@2x.webp 2x" width="286" height="400">
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/news3-tablet.webp 1x, img/news3-tablet@2x.webp 2x" width="324" height="350">
@@ -482,16 +486,18 @@
                   <source type="image/jpg" media="(min-width: 768px)" srcset="img/news3-tablet.jpg 1x, img/news3-tablet@2x.jpg 2x" width="324" height="350">
                   <img class="news__image" src="img/news3-tablet.jpg" srcset="img/news3-tablet@2x.jpg" width="290" height="330" alt="Девушка с круглым бейджем с надписью 'VOLUNTEER'.">
                 </picture>
-                <span class="news__date">17/03/2023</span>
-                <h4 class="news__subtitle">Новая программа волонтёрства</h4>
-                <div class="news__text">
-                  <p>Программа помощи детям длительностью 4 месяца</p>
+                <div class="news__content">
+                  <span class="news__date">17/03/2023</span>
+                  <h4 class="news__subtitle">Новая программа волонтёрства</h4>
+                  <div class="news__text">
+                    <p>Программа помощи детям длительностью 4 месяца</p>
+                  </div>
+                  <a class="news__link button" href="#">
+                    <span class="visually-hidden">Перейти по ссылке</span>
+                  </a>
                 </div>
-                <a class="news__link" href="#">
-                  <span class="visually-hidden">Перейти по ссылке</span>
-                </a>
               </li>
-              <li class="news__item">
+              <li class="news__item swiper-slide">
                 <picture>
                   <source type="image/webp" media="(min-width: 1440px)" srcset="img/news4-desktop.webp 1x, img/news4-desktop@2x.webp 2x" width="604" height="400">
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/news4-tablet.webp 1x, img/news4-tablet@2x.webp 2x" width="324" height="350">
@@ -500,37 +506,31 @@
                   <source type="image/jpg" media="(min-width: 768px)" srcset="img/news4-tablet.jpg 1x, img/news4-tablet@2x.jpg 2x" width="324" height="350">
                   <img class="news__image" src="img/news4-tablet.jpg" srcset="img/news4-tablet@2x.jpg" width="290" height="240" alt="Рабочий стол с тремя ноутбуками.">
                 </picture>
-                <span class="news__date">10/03/2023</span>
-                <h4 class="news__subtitle">Построй свою карьеру</h4>
-                <div class="news__text">
-                  <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+                <div class="news__content">
+                 <span class="news__date">10/03/2023</span>
+                  <h4 class="news__subtitle">Построй свою карьеру</h4>
+                  <div class="news__text">
+                    <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+                  </div>
+                  <a class="news__link button" href="#">
+                    <span class="visually-hidden">Перейти по ссылке</span>
+                  </a>
                 </div>
-                <a class="news__link" href="#">
-                  <span class="visually-hidden">Перейти по ссылке</span>
-                </a>
               </li>
             </ul>
-            <div class="news__navigation">
-              <button class="news__button news__button--prev">
+            <div class="news__navigation button-wrapper">
+              <button class="news__button news__button--prev button-arrow button-arrow--prev">
                 <span class="visually-hidden">Предыдущий слайд</span>
               </button>
-              <button class="news__button news__button--next">
+              <button class="news__button news__button--next button-arrow">
                 <span class="visually-hidden">Следующий слайд</span>
               </button>
             </div>
             <div class="news__pagination">
-              <button class="news__pagination-button" type="button">
-                <span class="visually-hidden">1 слайд</span>
-              </button>
-              <button class="news__pagination-button" type="button">
-                <span class="visually-hidden">2 слайд</span>
-              </button>
-              <button class="news__pagination-button" type="button">
-                <span class="visually-hidden">3 слайд</span>
-              </button>
-              <button class="news__pagination-button" type="button">
-                <span class="visually-hidden">4 слайд</span>
-              </button>
+              <button class="news__pagination-button news__pagination-button--active" type="button">1</button>
+              <button class="news__pagination-button" type="button">2</button>
+              <button class="news__pagination-button" type="button">3</button>
+              <button class="news__pagination-button" type="button">4</button>
             </div>
           </div>
         </div>
@@ -553,8 +553,8 @@
                 учебных расходов.</p>
               </div>
             </div>
-            <div class="faq__accordion">
-              <button class="faq__button">Как определяется стоимость программы?</button>
+            <div class="faq__accordion faq__accordion--active">
+              <button class="faq__button faq__button--active">Как определяется стоимость программы?</button>
               <div class="faq__panel">
                 <p>Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант «Стажировка»
                 не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.</p>
@@ -582,17 +582,17 @@
       </section>
       <section class="reviews container" id="reviews" data-test="reviews">
         <div class="reviews__wrapper">
-          <div class="reviews__slider">
+          <div class="reviews__slider swiper" id="swiper-reviews">
             <h3 class="reviews__title title">Отзывы</h3>
-            <ul class="reviews__list list">
-              <li class="reviews__item">
+            <ul class="reviews__list list swiper-wrapper">
+              <li class="reviews__item swiper-slide">
                 <picture>
                   <source type="image/webp" media="(min-width: 768px)" srcset="./img/avatar1.webp 1x, ./img/avatar1@2x.webp 2x" width="90" height="90">
                   <source type="image/webp" srcset="./img/avatar1-mobile.webp 1x, ./img/avatar1-mobile@2x.webp 2x" width="60" height="60">
                   <source type="image/png" media="(min-width: 768px)" srcset="./img/avatar1.png 1x, ./img/avatar1@2x.png 2x" width="90" height="90">
                   <img class="reviews__image" src="./img/avatar1-mobile.png" srcset="./img/avatar1-mobile@2x.png" width="60" height="60" alt="Фото участника.">
                 </picture>
-                <h4 class="reviews__subtitle">Лола Алекс</h4>
+                <h4 class="reviews__subtitle">Лола<br>Алекс</h4>
                 <ul class="reviews__sublist list">
                   <li class="reviews__subitem">
                     <h5 class="reviews__term">программа</h5>
@@ -610,14 +610,14 @@
                   за предоставленную мне возможность.</p>
                 </div>
               </li>
-              <li class="reviews__item">
+              <li class="reviews__item swiper-slide">
                 <picture>
                   <source type="image/webp" media="(min-width: 768px)" srcset="./img/avatar2.webp 1x, ./img/avatar2@2x.webp 2x" width="90" height="90">
                   <source type="image/webp" srcset="./img/avatar2.webp 1x, ./img/avatar2@2x.webp 2x" width="60" height="60">
                   <source type="image/png" media="(min-width: 768px)" srcset="./img/avatar2.png 1x, ./img/avatar2@2x.png 2x" width="90" height="90">
                   <img class="reviews__image" src="./img/avatar2.png" srcset="./img/avatar2@2x.png" width="60" height="60" alt="Фото участника.">
                 </picture>
-                <h4 class="reviews__subtitle">Давид Иванов</h4>
+                <h4 class="reviews__subtitle">Давид<br>Иванов</h4>
                 <ul class="reviews__sublist list">
                   <li class="reviews__subitem">
                     <h5 class="reviews__term">программа</h5>
@@ -635,14 +635,14 @@
                   частью такой удивительной инициативы.</p>
                 </div>
               </li>
-              <li class="reviews__item">
+              <li class="reviews__item swiper-slide">
                 <picture>
                   <source type="image/webp" media="(min-width: 768px)" srcset="./img/avatar1.webp 1x, ./img/avatar1@2x.webp 2x" width="90" height="90">
                   <source type="image/webp" srcset="./img/avatar1-mobile.webp 1x, ./img/avatar1-mobile@2x.webp 2x" width="60" height="60">
                   <source type="image/png" media="(min-width: 768px)" srcset="./img/avatar1.png 1x, ./img/avatar1@2x.png 2x" width="90" height="90">
                   <img class="reviews__image" src="./img/avatar1-mobile.png" srcset="./img/avatar1-mobile@2x.png" width="60" height="60" alt="Фото участника.">
                 </picture>
-                <h4 class="reviews__subtitle">Лола Алекс</h4>
+                <h4 class="reviews__subtitle">Лола<br>Алекс</h4>
                 <ul class="reviews__sublist list">
                   <li class="reviews__subitem">
                     <h5 class="reviews__term">программа</h5>
@@ -662,14 +662,14 @@
                     за предоставленную мне возможность.</p>
                 </div>
               </li>
-              <li class="reviews__item">
+              <li class="reviews__item swiper-slide">
                 <picture>
                   <source type="image/webp" media="(min-width: 768px)" srcset="./img/avatar2.webp 1x, ./img/avatar2@2x.webp 2x" width="90" height="90">
                   <source type="image/webp" srcset="./img/avatar2.webp 1x, ./img/avatar2@2x.webp 2x" width="60" height="60">
                   <source type="image/png" media="(min-width: 768px)" srcset="./img/avatar2.png 1x, ./img/avatar2@2x.png 2x" width="90" height="90">
                   <img class="reviews__image" src="./img/avatar2.png" srcset="./img/avatar2@2x.png" width="60" height="60" alt="Фото участника.">
                 </picture>
-                <h4 class="reviews__subtitle">Давид Иванов</h4>
+                <h4 class="reviews__subtitle">Давид<br>Иванов</h4>
                 <ul class="reviews__sublist list">
                   <li class="reviews__subitem">
                     <h5 class="reviews__term">программа</h5>
@@ -705,10 +705,10 @@
               </button>
             </div>
             <div class="reviews__navigation">
-              <button class="reviews__button reviews__button--prev">
+              <button class="reviews__button reviews__button--prev button-arrow button-arrow--prev">
                 <span class="visually-hidden">Предыдущий слайд</span>
               </button>
-              <button class="reviews__button reviews__button--next">
+              <button class="reviews__button reviews__button--next button-arrow">
                 <span class="visually-hidden">Следующий слайд</span>
               </button>
             </div>

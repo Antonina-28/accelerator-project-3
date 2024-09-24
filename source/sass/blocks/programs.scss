@@ -57,26 +57,6 @@
   }
 }
 
-.programs__button {
-  width: 22px;
-  height: 22px;
-  border: 1px solid $secondary-color;
-  mask-image: url("../__spritemap#sprite-arrow-view");
-  mask-repeat: no-repeat;
-  mask-size: 8px 8px;
-  mask-position: center;
-  background-color: $primary-blue;
-  transform: rotate(45deg);
-
-  &:disabled {
-    background-color: $condition-disabled;
-  }
-}
-
-.programs__button--prev {
-  transform: rotate(225deg);
-}
-
 .programs__list {
   width: 290px;
   margin-bottom: 30px;

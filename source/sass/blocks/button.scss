@@ -104,3 +104,27 @@
     opacity: 0.6;
   }
 }
+
+.button-arrow {
+  width: 22px;
+  height: 22px;
+  border: 1px solid $secondary-color;
+  mask-image: url("../__spritemap#sprite-arrow-view");
+  mask-repeat: no-repeat;
+  mask-size: 8px 8px;
+  mask-position: center;
+  background-color: $primary-blue;
+  transform: rotate(45deg);
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+
+  &:disabled {
+    background-color: $condition-disabled;
+  }
+}
+
+.button-arrow--prev {
+  transform: rotate(225deg);
+}
