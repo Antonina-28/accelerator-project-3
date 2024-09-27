@@ -5,6 +5,10 @@
   @media (min-width: $tablet-width) {
     padding: 50px 58px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding: 60px 100px;
+  }
 }
 
 .form-section__wrapper {
@@ -32,6 +36,16 @@
       url("/img/form-tablet@2x.webp") 2x type("image/webp"),
       url("/img/form-tablet@2x.jpg") 2x);
   }
+
+  @media (min-width: $desktop-width) {
+    width: 1240px;
+    height: 800px;
+    background-image:
+      image-set(url("/img/form-desktop.webp") 1x type("image/webp"),
+      url("/img/form-desktop.jpg") 1x,
+      url("/img/form-desktop@2x.webp") 2x type("image/webp"),
+      url("/img/form-desktop@2x.jpg") 2x);
+  }
 }
 
 .form-section__container {
@@ -43,7 +57,12 @@
 
   @media (min-width: $tablet-width) {
     width: 442px;
-    padding: 30px 40px 36px;
+    padding: 30px 40px 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 490px;
+    padding: 28px 70px 37px;
   }
 }
 
@@ -59,6 +78,12 @@
     padding: 11px 8px 11px 0;
     margin-bottom: 20px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding: 14px 0;
+    font-size: 32px;
+    line-height: 36px;
+  }
 }
 
 .form-section__text {
@@ -72,13 +97,21 @@
     font-size: 16px;
     margin-bottom: 40px;
   }
+
+  @media (min-width: $desktop-width) {
+    line-height: 26px;
+  }
 }
 
 .form-section__form .form__list {
   gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
 }
 
-.form-section__form .form__item {
+.form-section__form .form__item:not(.form__item--checkbox) {
   gap: 12px;
 }
 
@@ -100,10 +133,14 @@
 }
 
 .form-section__form .form__input--textarea {
-  min-height: 94px;
+  height: 94px;
 
   @media (min-width: $tablet-width) {
-    min-height: 88px;
+    height: 88px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 90px;
   }
 }
 
@@ -128,6 +165,16 @@
 
 .form-section__form .form__label--checkbox {
   color: $base-white;
+
+  @media (min-width: $tablet-width) {
+    br {
+      display: none;
+    }
+
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: -0.4px;
+  }
 }
 
 .form__button {
@@ -137,6 +184,15 @@
   color: $base-white;
   background-color: $primary-blue;
   justify-content: center;
+
+  @media (min-width: $tablet-width) {
+    width: 352px;
+    padding: 20px 81px 20px 31px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 350px;
+  }
 }
 
 .form__button::after {

@@ -1,0 +1,45 @@
+.social__link {
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $primary-blue;
+  color: $base-white;
+  border-radius: 50%;
+
+  @media (min-width: $tablet-width) {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+.social__link--vk .social__icon {
+  width: 12px;
+  height: 6px;
+
+  @media (min-width: $tablet-width) {
+    width: 16px;
+    height: 9px;
+  }
+}
+
+.social__link--ok .social__icon {
+  width: 7px;
+  height: 12px;
+
+  @media (min-width: $tablet-width) {
+    width: 9px;
+    height: 16px;
+  }
+}
+
+.social__link--reddit .social__icon {
+  width: 11px;
+  height: 11px;
+
+  @media (min-width: $tablet-width) {
+    width: 15px;
+    height: 15px;
+  }
+}
