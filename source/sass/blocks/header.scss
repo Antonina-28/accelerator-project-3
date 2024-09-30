@@ -3,7 +3,7 @@
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 5;
+  z-index: 2;
 
   @media (min-width: $tablet-width) {
     top: 30px;
@@ -27,15 +27,15 @@
 }
 
 .header__logo {
-  margin-top: 1px;
+  margin-top: 2px;
 }
 
 .header-nav__toggle {
   position: relative;
+  min-width: 136px;
   font-size: 14px;
   line-height: 14px;
   font-weight: 500;
-  letter-spacing: -0.62px;
   text-align: left;
   text-transform: uppercase;
   color: $primary-blue;
@@ -49,6 +49,7 @@
   @media (min-width: $tablet-width) {
     padding-top: 20px;
     padding-bottom: 20px;
+    letter-spacing: 0.3px;
   }
 }
 
@@ -86,7 +87,8 @@
 .header-nav__toggle::before {
   position: absolute;
   content: "";
-  top: 22px;
+  top: 50%;
+  transform: translateY(-50%);
   right: 18px;
   background-color: $base-white;
   mask-repeat: no-repeat;

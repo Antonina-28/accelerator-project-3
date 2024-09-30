@@ -3,16 +3,13 @@
   font-size: 20px;
   font-weight: 400;
   color: $primary-blue;
-  letter-spacing: -0.65px;
 
   @media (min-width: $tablet-width) {
     font-size: 34px;
     line-height: 50px;
-    letter-spacing: -1.2px;
   }
 
   @media (min-width: $desktop-width) {
     font-size: 50px;
-    letter-spacing: -1.78px;
   }
 }

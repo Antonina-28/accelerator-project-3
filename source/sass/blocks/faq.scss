@@ -34,14 +34,24 @@
 .faq__accordion {
   border-radius: 14px;
   border: 2px solid $primary-blue;
-  padding: 22px 17px;
+  padding: 22px 17px 21px 15px;
 
   @media (min-width: $tablet-width) {
-    padding: 32px;
+    padding: 30px;
   }
 
   @media (min-width: $desktop-width) {
     padding: 42px;
+  }
+}
+
+.faq__accordion:nth-child(4),
+.faq__accordion:nth-child(5) {
+  padding-bottom: 18px;
+  padding-top: 21px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 25px;
   }
 }
 
@@ -89,7 +99,7 @@
   background-color: $primary-blue;
   top: 50%;
   transform: translateY(-50%);
-  right: 0;
+  right: -2px;
 
   @media (min-width: $tablet-width) {
     transform: none;
@@ -108,7 +118,7 @@
   mask-repeat: no-repeat;
   top: 50%;
   transform: translateY(-46%);
-  right: 9px;
+  right: 7px;
   z-index: 1;
 
   @media (min-width: $tablet-width) {
@@ -126,7 +136,7 @@
   }
 
   &::before {
-    right: 11px;
+    right: 9px;
     mask-image: none;
     width: 18px;
     height: 1px;

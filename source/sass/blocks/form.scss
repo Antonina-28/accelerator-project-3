@@ -29,7 +29,6 @@
   font-size: 14px;
   line-height: 14px;
   opacity: 0.8;
-  letter-spacing: -0.4px;
 
   @media (min-width: $tablet-width) {
     line-height: 20px;
@@ -150,4 +149,8 @@
 .form__input.error {
   background-color: rgba(255, 94, 102, 0.2);
   border: 1px solid $condition-error;
+}
+
+.form__select option label {
+  display: none;
 }

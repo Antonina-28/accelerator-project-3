@@ -41,12 +41,10 @@
 .grant__text p {
   margin: 0;
   font-size: 14px;
-  letter-spacing: -0.45px;
 
   @media (min-width: $tablet-width) {
     width: 498px;
     font-size: 16px;
-    letter-spacing: -0.5px;
     color: $secondary-color;
   }
 
@@ -73,13 +71,11 @@
   font-size: 18px;
   line-height: 22px;
   font-weight: 400;
-  letter-spacing: -0.5px;
 
   @media (min-width: $tablet-width) {
     font-size: 28px;
     line-height: 28px;
     margin-bottom: 20px;
-    letter-spacing: -0.83px;
   }
 
   @media (min-width: $desktop-width) {
@@ -156,12 +152,11 @@
 .grant__item-text {
   margin: 0;
   min-width: 275px;
-  padding: 24px 26px;
+  padding: 24px 25px;
   border-radius: 16px;
   border: 1px solid $secondary-color;
   font-size: 14px;
   color: $secondary-color;
-  letter-spacing: -0.5px;
 
   @media (min-width: $tablet-width) {
     font-size: 16px;
