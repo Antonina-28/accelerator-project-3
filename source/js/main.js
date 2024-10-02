@@ -10,6 +10,7 @@ import { flippingThroughTheSliderPrograms } from './programs-swiper';
 import { flippingThroughTheSliderNews } from './news-swiper';
 import { faqButtonClick } from './faq-accordion';
 import { flippingThroughTheSliderReviews } from './reviews-swiper';
+import './validate-form';
 
 clickMenu();
 flippingThroughTheSliderHero();

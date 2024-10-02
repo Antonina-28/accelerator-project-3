@@ -88,11 +88,14 @@
   mask-size: 16px 16px;
   mask-position: right;
   right: 20px;
-  top: 47px;
+  top: 37px;
+
+  @media (min-width: $tablet-width) {
+    top: 49px;
+  }
 }
 
 .form__select option {
-  margin-top: 4px;
   border-radius: 8px;
   border: 1px solid $base-primary;
 }

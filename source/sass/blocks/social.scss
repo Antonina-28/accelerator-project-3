@@ -12,6 +12,21 @@
     width: 36px;
     height: 36px;
   }
+
+  &:hover {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  &:focus-visible {
+    outline: none;
+    background-color: $base-white;
+    color: $primary-blue;
+  }
+
+  &:active {
+    background-color: $secondary-blue;
+    color: $base-white;
+  }
 }
 
 .social__link--vk .social__icon {

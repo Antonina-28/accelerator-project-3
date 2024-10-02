@@ -69,6 +69,17 @@
   @media (min-width: $desktop-width) {
     padding: 11px 33px;
   }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:focus-visible {
+    outline: none;
+    background-color: $base-white;
+    color: $primary-blue;
+    opacity: 1;
+  }
 }
 
 .news__tab-link--active {
@@ -345,12 +356,32 @@
   font-size: 14px;
   line-height: 14px;
   opacity: 0.5;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     width: 32px;
     height: 32px;
     font-size: 16px;
     line-height: 20px;
+  }
+
+  &:hover {
+    border: 2px solid $primary-blue;
+    opacity: 1;
+  }
+
+  &:focus-visible {
+    outline: none;
+    background-color: $base-white;
+    border: 2px solid $primary-blue;
+    opacity: 1;
+  }
+
+  &:active {
+    background-color: $secondary-blue;
+    border: 2px solid $secondary-blue;
+    color: $base-white;
+    opacity: 1;
   }
 }
 

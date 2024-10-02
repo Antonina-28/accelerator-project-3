@@ -10,11 +10,11 @@ export function clickMenu() {
     toggleMenu();
   });
 
-  body.addEventListener('click', (event) => {
-    if (!headerNav.contains(event.target) && !navToggle.contains(event.target)) {
-      closeMenu();
-    }
-  });
+  // body.addEventListener('click', (event) => {
+  //   if (!headerNav.contains(event.target) && !navToggle.contains(event.target)) {
+  //     closeMenu();
+  //   }
+  // });
 
   headerNavItems.forEach((item) => {
     item.addEventListener('click', () => {
@@ -35,14 +35,14 @@ function openMenu() {
   headerNav.classList.remove('header-nav--closed');
   headerNav.classList.add('header-nav--opened');
   navToggle.classList.add('active');
-  overlay(true);
+  overlay(false);
 }
 
 function closeMenu() {
   headerNav.classList.add('header-nav--closed');
   headerNav.classList.remove('header-nav--opened');
   navToggle.classList.remove('active');
-  overlay(false);
+  overlay(true);
 }
 
 function toggleSubmenu(item) {

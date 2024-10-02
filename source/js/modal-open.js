@@ -3,6 +3,7 @@ import { overlay } from './functions/overlay';
 const buttonOpen = document.querySelector('.about__button');
 const aboutModal = document.querySelector('.about__modal');
 const buttonClose = document.querySelector('.modal__button--close');
+const modalForm = document.querySelector('.modal__form');
 
 buttonOpen.addEventListener('click', (event) => {
   event.stopPropagation();
@@ -17,9 +18,6 @@ buttonClose.addEventListener('click', () => {
   overlay(false);
 });
 
-document.addEventListener('click', (event) => {
-  if (!event.target.closest('.about__modal') && !event.target.closest('.about__button')) {
-    aboutModal.classList.remove('modal--open');
-    aboutModal.classList.add('modal--close');
-  }
+modalForm.addEventListener('click', (event) => {
+  event.stopPropagation();
 });
