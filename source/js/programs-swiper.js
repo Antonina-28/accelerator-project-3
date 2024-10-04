@@ -7,6 +7,7 @@ const options = {
   direction: 'horizontal',
   slidesPerView: 1,
   spaceBetween: 15,
+  slidesPerGroup: 1,
   loop: false,
   navigation: {
     nextEl: '.programs__button--next',

@@ -115,6 +115,7 @@
   mask-position: center;
   background-color: $primary-blue;
   transform: rotate(45deg);
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     display: flex;

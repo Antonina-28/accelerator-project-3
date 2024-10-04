@@ -115,11 +115,12 @@
 
 .form__item--checkbox {
   flex-direction: row-reverse;
-  gap: 10px;
+  gap: 9px;
   align-items: center;
 
   @media (min-width: $tablet-width) {
     justify-content: flex-end;
+    gap: 10px;
   }
 }
 

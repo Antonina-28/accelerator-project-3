@@ -34,25 +34,6 @@
 .faq__accordion {
   border-radius: 14px;
   border: 2px solid $primary-blue;
-  padding: 22px 17px 21px 15px;
-
-  @media (min-width: $tablet-width) {
-    padding: 30px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding: 42px;
-  }
-}
-
-.faq__accordion:nth-child(4),
-.faq__accordion:nth-child(5) {
-  padding-bottom: 18px;
-  padding-top: 21px;
-
-  @media (min-width: $tablet-width) {
-    padding-bottom: 25px;
-  }
 }
 
 .faq__accordion--active {
@@ -62,8 +43,7 @@
 
 .faq__button {
   position: relative;
-  padding: 0;
-  padding-right: 56px;
+  padding: 22px 73px 22px 15px;
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
@@ -78,14 +58,15 @@
   @media (min-width: $tablet-width) {
     font-size: 22px;
     line-height: 26px;
-    width: 610px;
-    padding: 7px 50px 7px 0;
+    width: 674px;
+    padding: 38px 82px 36px 30px;
   }
 
   @media (min-width: $desktop-width) {
     font-size: 28px;
     line-height: 34px;
-    width: 940px;
+    width: 1024px;
+    padding: 43px 92px 43px 40px;
   }
 }
 
@@ -99,11 +80,14 @@
   background-color: $primary-blue;
   top: 50%;
   transform: translateY(-50%);
-  right: -2px;
+  right: 15px;
 
   @media (min-width: $tablet-width) {
-    transform: none;
-    top: 0;
+    right: 34px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 44px;
   }
 }
 
@@ -118,25 +102,45 @@
   mask-repeat: no-repeat;
   top: 50%;
   transform: translateY(-46%);
-  right: 7px;
+  right: 24px;
   z-index: 1;
 
   @media (min-width: $tablet-width) {
-    transform: none;
-    top: 11px;
+    right: 43px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 53px;
   }
 }
 
 .faq__button--active {
   color: $base-white;
 
+  @media (min-width: $tablet-width) {
+    padding-bottom: 26px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 23px;
+  }
+
   &::after {
     background-color: $base-white;
     border: 1px solid $base-white;
+
+    @media (min-width: $tablet-width) {
+      top: 30px;
+      transform: none;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 40px;
+    }
   }
 
   &::before {
-    right: 9px;
+    right: 26px;
     mask-image: none;
     width: 18px;
     height: 1px;
@@ -144,7 +148,58 @@
     z-index: 1;
 
     @media (min-width: $tablet-width) {
-      top: 20px;
+      right: 45px;
+      top: 50px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 60px;
+      right: 55px;
+    }
+  }
+}
+
+.faq__accordion:nth-child(4) .faq__button,
+.faq__accordion:nth-child(5) .faq__button {
+  br {
+    display: none;
+  }
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    br {
+      display: block;
+    }
+
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    &::after {
+      top: 30px;
+      transform: none;
+    }
+
+    &::before {
+      top: 50px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    br {
+      display: none;
+    }
+
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    &::after {
+      top: 40px;
+    }
+
+    &::before {
+      top: 60px;
     }
   }
 }
@@ -156,10 +211,93 @@
 
 .faq__panel p {
   margin: 0;
-  margin-top: 20px;
   font-size: 14px;
+  padding: 0 15px 20px;
 
   @media (min-width: $tablet-width) {
     font-size: 16px;
+    padding: 0 32px 30px 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    line-height: 26px;
+    padding: 0 42px 40px 39px;
+  }
+}
+
+.faq__button:hover,
+.faq__button:focus-visible {
+  background-color: $base-white;
+
+  &::after {
+    background-color: $base-white;
+  }
+
+  &::before {
+    background-color: $primary-blue;
+  }
+}
+
+.faq__button:active {
+  background-color: $base-white;
+  color: $secondary-blue;
+
+  &::after {
+    background-color: $secondary-blue;
+    border: 1px solid $secondary-blue;
+  }
+
+  &::before {
+    background-color: $base-white;
+  }
+}
+
+.faq__button--active:hover,
+.faq__button--active:focus-visible {
+  background-color: $primary-blue;
+
+  &::after {
+    background-color: $primary-blue;
+    border: 1px solid $base-white;
+  }
+
+  &::before {
+    background-color: $base-white;
+  }
+}
+
+.faq__button--active:active {
+  border-radius: 14px 14px 0 0;
+  background-color: $secondary-blue;
+  color: $base-white;
+
+  &::after {
+    background-color: $base-white;
+    border: 1px solid $base-white;
+  }
+
+  &::before {
+    background-color: $secondary-blue;
+  }
+}
+
+.faq__button--active:active + .faq__panel p {
+  background-color: $secondary-blue;
+  border-radius: 0 0 14px 14px;
+}
+
+.faq__button:disabled {
+  background-color: $condition-disabled;
+  color: rgba(255, 255, 255, 0.7);
+  pointer-events: none;
+
+  &::after {
+    background-color: $condition-disabled;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+  }
+
+  &::before {
+    background-color: $base-white;
+    opacity: 0.7;
   }
 }

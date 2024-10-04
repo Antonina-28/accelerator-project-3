@@ -3,18 +3,11 @@ import { overlay } from './functions/overlay';
 const headerNav = document.querySelector('.header-nav');
 const navToggle = document.querySelector('.header-nav__toggle');
 const headerNavItems = document.querySelectorAll('.header-nav__item');
-const body = document.body;
 
 export function clickMenu() {
   navToggle.addEventListener('click', () => {
     toggleMenu();
   });
-
-  // body.addEventListener('click', (event) => {
-  //   if (!headerNav.contains(event.target) && !navToggle.contains(event.target)) {
-  //     closeMenu();
-  //   }
-  // });
 
   headerNavItems.forEach((item) => {
     item.addEventListener('click', () => {
@@ -31,18 +24,29 @@ function toggleMenu() {
   }
 }
 
+const handleClick = (event) => {
+  if (!event.target.closest('.header-nav--opened')) {
+    overlay(false);
+    headerNav.classList.add('header-nav--closed');
+    headerNav.classList.remove('header-nav--opened');
+    navToggle.classList.remove('active');
+  }
+};
+
 function openMenu() {
   headerNav.classList.remove('header-nav--closed');
   headerNav.classList.add('header-nav--opened');
   navToggle.classList.add('active');
-  overlay(false);
+  overlay(true);
+  document.addEventListener('click', handleClick);
 }
 
 function closeMenu() {
   headerNav.classList.add('header-nav--closed');
   headerNav.classList.remove('header-nav--opened');
   navToggle.classList.remove('active');
-  overlay(true);
+  overlay(false);
+  document.removeEventListener('click', handleClick);
 }
 
 function toggleSubmenu(item) {

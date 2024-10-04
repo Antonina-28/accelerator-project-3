@@ -16,7 +16,7 @@
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 1240px;
-    padding: 120px 100px;
+    padding: 120px 100px 116px;
   }
 }
 
@@ -24,7 +24,7 @@
   @media (min-width: $desktop-width) {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 40px;
+    padding-bottom: 35px;
     border-bottom: 2px solid rgba(255, 255, 255, 0.2);
     margin-bottom: 40px;
   }
@@ -48,8 +48,8 @@
 .contacts__list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  padding-bottom: 23px;
+  gap: 16px;
+  padding-bottom: 30px;
   border-bottom: 2px solid rgba(255, 255, 255, 0.2);
   margin-bottom: 30px;
 
@@ -68,9 +68,13 @@
   }
 }
 
+.contacts__item:nth-child(3) .contacts__subtitle {
+  margin-top: 4px;
+}
+
 .contacts__subtitle {
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
   text-transform: uppercase;
   color: $secondary-color;
   font-size: 12px;

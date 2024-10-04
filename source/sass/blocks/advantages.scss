@@ -30,12 +30,12 @@
 
 .advantages__item {
   position: relative;
-  padding: 16px 21px 14px;
+  padding: 16px 20px 14px;
   border: 1px solid $secondary-color;
   border-radius: 16px;
 
   @media (min-width: $desktop-width) {
-    padding: 31px 41px 29px;
+    padding: 30px 40px;
     display: grid;
     grid-template-columns: 201px 201px;
     align-items: center;
@@ -63,16 +63,20 @@
   font-weight: 400;
   text-transform: uppercase;
   color: $base-white;
+  letter-spacing: 0.12px;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 22px;
+    font-weight: 300;
+    letter-spacing: 0.25px;
   }
 
   @media (min-width: $desktop-width) {
     font-size: 26px;
     line-height: 30px;
     margin-bottom: 0;
+    font-weight: 400;
   }
 }
 
