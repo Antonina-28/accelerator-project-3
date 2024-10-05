@@ -95,12 +95,18 @@
   }
 }
 
+.form__select:focus + .form__icon {
+  transition: transform 0.5s ease;
+  transform: rotate(180deg);
+}
+
 .form__select option {
   border-radius: 8px;
   border: 1px solid $base-primary;
 }
 
 .form__input--checkbox {
+  position: relative;
   appearance: none;
   width: 21px;
   height: 20px;
@@ -124,12 +130,16 @@
   }
 }
 
-.form__item--checkbox .form__input--checkbox:checked {
-  background-image: url("../__spritemap#sprite-check-view");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 10px 10px;
-  color: $base-white;
+.form__input--checkbox:checked .form__input--checkbox::after {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  mask-image: url("../__spritemap#sprite-check-view");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 10px 10px;
+  background-color: $base-white;
 }
 
 .form__item:hover,

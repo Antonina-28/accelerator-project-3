@@ -106,26 +106,58 @@
 }
 
 .button-arrow {
+  position: relative;
   width: 22px;
   height: 22px;
   border: 1px solid $secondary-color;
-  mask-image: url("../__spritemap#sprite-arrow-view");
-  mask-repeat: no-repeat;
-  mask-size: 8px 8px;
-  mask-position: center;
-  background-color: $primary-blue;
-  transform: rotate(45deg);
+  border-radius: 50%;
   cursor: pointer;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    right: 7px;
+    width: 8px;
+    height: 8px;
+    mask-image: url("../__spritemap#sprite-arrow-view");
+    mask-repeat: no-repeat;
+    mask-size: 8px 8px;
+    mask-position: center;
+    background-color: $primary-blue;
+  }
 
   @media (min-width: $tablet-width) {
     display: flex;
   }
+}
 
-  &:disabled {
+.button-arrow:hover {
+  &::after {
+    opacity: 0.7;
+  }
+}
+
+.button-arrow:focus {
+  background-color: $base-white;
+}
+
+.button-arrow:active {
+  background-color: $base-white;
+
+  &::after {
+    opacity: 0.7;
+  }
+}
+
+.button-arrow:disabled {
+  &::after {
     background-color: $condition-disabled;
   }
 }
 
-.button-arrow--prev {
-  transform: rotate(225deg);
+.button-arrow--prev::after {
+  transform: translateY(-50%) rotate(225deg);
+  right: 5px;
 }

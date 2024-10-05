@@ -121,6 +121,10 @@
   @media (min-width: $tablet-width) {
     align-items: center;
   }
+
+  @media (min-width: $desktop-width) {
+    justify-content: flex-end;
+  }
 }
 
 .reviews__term {

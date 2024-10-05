@@ -70,6 +70,10 @@
 
 .contacts__item:nth-child(3) .contacts__subtitle {
   margin-top: 4px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+  }
 }
 
 .contacts__subtitle {

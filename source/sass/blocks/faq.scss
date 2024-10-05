@@ -83,11 +83,11 @@
   right: 15px;
 
   @media (min-width: $tablet-width) {
-    right: 34px;
+    right: 30px;
   }
 
   @media (min-width: $desktop-width) {
-    right: 44px;
+    right: 40px;
   }
 }
 
@@ -106,11 +106,11 @@
   z-index: 1;
 
   @media (min-width: $tablet-width) {
-    right: 43px;
+    right: 39px;
   }
 
   @media (min-width: $desktop-width) {
-    right: 53px;
+    right: 49px;
   }
 }
 
@@ -148,13 +148,13 @@
     z-index: 1;
 
     @media (min-width: $tablet-width) {
-      right: 45px;
+      right: 41px;
       top: 50px;
     }
 
     @media (min-width: $desktop-width) {
       top: 60px;
-      right: 55px;
+      right: 51px;
     }
   }
 }

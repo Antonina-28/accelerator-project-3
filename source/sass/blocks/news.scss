@@ -1,7 +1,8 @@
 .news__wrapper {
-  padding: 50px 15px;
+  padding: 51px 15px 50px;
 
   @media (min-width: $tablet-width) {
+    padding-top: 50px;
     padding-left: 45px;
     padding-right: 45px;
   }
@@ -16,7 +17,7 @@
   margin-bottom: 22px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 30px;
+    margin-bottom: 29px;
   }
 
   @media (min-width: $desktop-width) {
@@ -28,7 +29,7 @@
   display: flex;
   align-items: center;
   min-height: 38px;
-  margin-bottom: 24px;
+  margin-bottom: 23px;
   gap: 10px;
   width: 305px;
   overflow: scroll;
@@ -38,13 +39,20 @@
     min-height: 46px;
     gap: 7px;
     overflow: visible;
-    margin: 0 2px 30px;
+    margin: 0 2px 31px;
   }
 
   @media (min-width: $desktop-width) {
     width: 720px;
     margin: 0 auto;
     margin-bottom: 40px;
+    gap: 0;
+  }
+}
+
+.news__tab:nth-child(2) {
+  @media (min-width: $desktop-width) {
+    margin-right: -28px;
   }
 }
 
@@ -61,13 +69,13 @@
   opacity: 0.6;
 
   @media (min-width: $tablet-width) {
-    padding: 12px 21px 11px;
+    padding: 11px 21px 12px;
     font-size: 14px;
     line-height: 14px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 11px 33px;
+    padding: 12px 34px 11px;
   }
 
   &:hover {
@@ -298,20 +306,21 @@
     width: 207px;
     font-size: 20px;
     line-height: 24px;
-    padding: 10px 16px 6px 0;
+    padding: 11px 16px 4px 0;
   }
 
   @media (min-width: $desktop-width) {
     width: 190px;
     font-size: 24px;
     line-height: 26px;
+    padding: 10px 16px 6px 0;
   }
 }
 
 .news__text p {
   position: relative;
   margin: 0;
-  padding: 12px 0 10px;
+  padding: 13px 0 9px;
   width: 213px;
   background-color: $secondary-color;
   font-size: 12px;
@@ -327,6 +336,15 @@
 
   @media (min-width: $desktop-width) {
     line-height: 18px;
+  }
+}
+
+.news__item:nth-child(2) .news__text p {
+  padding: 14px 0 10px;
+
+  @media (min-width: $tablet-width) {
+    padding: 13px 0 15px;
+    padding-right: 6px;
   }
 }
 
