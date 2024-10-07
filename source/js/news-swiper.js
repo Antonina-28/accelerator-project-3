@@ -7,11 +7,11 @@ import 'swiper/css/navigation';
 const options = {
   loop: false,
   pagination: {
-    // el: '.swiper-pagination',
-    // clickable: true,
-    // modifierClass: 'news__pagination',
-    // bulletClass: 'news__pagination-button',
-    // bulletActiveClass: 'news__pagination-button--active',
+    el: '.news-pagination',
+    clickable: true,
+    modifierClass: 'news__pagination',
+    bulletClass: 'news__pagination-button',
+    bulletActiveClass: 'news__pagination-button--active',
   },
   navigation: {
     nextEl: '.news__button--next',

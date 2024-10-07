@@ -10,8 +10,16 @@ export function clickMenu() {
   });
 
   headerNavItems.forEach((item) => {
-    item.addEventListener('click', () => {
-      toggleSubmenu(item);
+    item.addEventListener('click', (event) => {
+      if (item.querySelector('.header-nav__sublist')) {
+        toggleSubmenu(item);
+      } else {
+        event.preventDefault();
+        const href = item.querySelector('a').href;
+        window.location.href = href;
+        overlay(false);
+        closeMenu();
+      }
     });
   });
 }
@@ -55,6 +63,12 @@ function toggleSubmenu(item) {
   } else {
     openSubmenu(item);
   }
+  item.querySelectorAll('.header-nav__subitem').forEach((subitem) => {
+    subitem.addEventListener('click', () => {
+      overlay(false);
+      closeMenu();
+    });
+  });
 }
 
 function openSubmenu(item) {

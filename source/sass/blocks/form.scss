@@ -130,16 +130,26 @@
   }
 }
 
-.form__input--checkbox:checked .form__input--checkbox::after {
+.form__input--checkbox::after {
   position: absolute;
   content: "";
   width: 10px;
   height: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5px;
   mask-image: url("../__spritemap#sprite-check-view");
   mask-repeat: no-repeat;
   mask-position: center;
   mask-size: 10px 10px;
-  background-color: $base-white;
+  background-color: transparent;
+}
+
+.form__input--checkbox:checked {
+  &::after {
+    background-color: $base-white;
+    right: 4px;
+  }
 }
 
 .form__item:hover,
@@ -160,9 +170,25 @@
   border: 1px solid rgba(169, 175, 183, 0.5);
 }
 
-.form__input.error {
+.form__input.error,
+.form__select.error {
   background-color: rgba(255, 94, 102, 0.2);
   border: 1px solid $condition-error;
+}
+
+.form__input--checkbox.error {
+  &::after {
+    background-color: transparent;
+  }
+
+  &:checked {
+    background-color: $primary-blue;
+    border: 1px solid $base-white;
+
+    &::after {
+      background-color: $base-white;
+    }
+  }
 }
 
 .form__select option label {

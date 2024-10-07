@@ -1,11 +1,11 @@
-const formSection = document.querySelector('.form-section__form');
-const nameInput = document.querySelector('#firstname');
-const phoneInput = document.querySelector('#number-phone');
-const citySelect = document.querySelector('#city');
-const dataCheckbox = document.querySelector('#data');
-const submitButton = document.querySelector('.form__button');
+const modalForm = document.querySelector('.modal__form');
+const nameInput = document.querySelector('#name');
+const phoneInput = document.querySelector('#phone');
+const citySelect = document.querySelector('#city-select');
+const personalDataCheckbox = document.querySelector('#personal-data');
+const submitButton = document.querySelector('.modal__button--submit');
 
-export function validateSectionForm() {
+export function validateModalForm() {
   submitButton.addEventListener('click', (e) => {
     e.preventDefault();
     validateForm();
@@ -13,14 +13,14 @@ export function validateSectionForm() {
 
   document.addEventListener('click', (e) => {
     if (e.target.classList.contains('modal')) {
-      formSection.reset();
+      modalForm.reset();
     }
   });
 
   document.addEventListener('click', (e) => {
     if (e.target.classList.contains('modal')) {
       if (!e.target.closest('.modal__form')) {
-        formSection.reset();
+        modalForm.reset();
       }
     }
   });
@@ -77,18 +77,18 @@ function validateForm() {
     citySelect.classList.remove('error');
   }
 
-  if (!dataCheckbox.checked) {
-    dataCheckbox.setCustomValidity('Вы должны согласиться на обработку персональных данных');
+  if (!personalDataCheckbox.checked) {
+    personalDataCheckbox.setCustomValidity('Вы должны согласиться на обработку персональных данных');
     isValid = false;
-    dataCheckbox.classList.add('error');
-    dataCheckbox.reportValidity();
+    personalDataCheckbox.classList.add('error');
+    personalDataCheckbox.reportValidity();
   } else {
-    dataCheckbox.setCustomValidity('');
-    dataCheckbox.classList.remove('error');
+    personalDataCheckbox.setCustomValidity('');
+    personalDataCheckbox.classList.remove('error');
   }
 
   if (isValid) {
-    formSection.submit();
-    formSection.reset();
+    modalForm.submit();
+    modalForm.reset();
   }
 }

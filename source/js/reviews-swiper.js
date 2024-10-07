@@ -1,5 +1,5 @@
 import Swiper from 'swiper/bundle';
-import { Pagination, Navigation} from 'swiper/modules';
+import { Navigation} from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -13,7 +13,14 @@ const options = {
     nextEl: '.reviews__button--next',
     prevEl: '.reviews__button--prev',
   },
-  modules: [Pagination, Navigation],
+  pagination: {
+    el: '.reviews__pagination',
+    clickable: true,
+    modifierClass: 'reviews__pagination',
+    bulletClass: 'reviews__pagination-button',
+    bulletActiveClass: 'reviews__pagination-button--active',
+  },
+  modules: [Navigation],
   breakpoints: {
     320: {
       slidesPerView: 1,

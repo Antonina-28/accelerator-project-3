@@ -165,8 +165,10 @@
   text-decoration: none;
   background-color: $base-white;
   padding: 15px 60px 15px 20px;
+  max-width: 154px;
 
   @media (min-width: $tablet-width) {
+    max-width: 198px;
     padding: 20px 81px 22px 29px;
   }
 }

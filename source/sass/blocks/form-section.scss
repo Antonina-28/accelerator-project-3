@@ -178,7 +178,7 @@
   border: 1px solid $base-white;
 
   &:checked {
-    color: $primary-blue;
+    background-color: $primary-blue;
   }
 }
 
@@ -219,4 +219,34 @@
 
 .form__button::before {
   background-color: $primary-blue;
+}
+
+.form-section__form .form__item:hover,
+.form__item:focus,
+.form__item:active {
+  .form__input:not(.form__input--checkbox),
+  .form__select {
+    border: 1px solid $base-white;
+  }
+}
+
+.form-section__form .form__input.error,
+.form-section__form .form__select.error {
+  background-color: rgba(255, 94, 102, 0.2);
+  border: 1px solid $condition-error;
+}
+
+.form-section__form .form__input--checkbox.error {
+  &::after {
+    background-color: transparent;
+  }
+
+  &:checked {
+    background-color: $base-white;
+    border: 1px solid $primary-blue;
+
+    &::after {
+      background-color: $primary-blue;
+    }
+  }
 }
